@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1 ,maximum-scale=1,minimum-scale=1, user-scalable=no">
+            <link rel="icon" type="image/jpeg" href="icon">
+            <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+            <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css">
+            <link rel="stylesheet" href="css/JqCloud.css">
+            <link rel="stylesheet" href="css/style.css">
+            <link rel="stylesheet" href="css/pacss.css">
+            <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+            <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+            <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/typed.js"></script>
+            <script src="js/JqCloud.js"></script>
+        <title></title>
+        <!-- <link rel="stylesheet" href="css/touMingDeWangZLiZi.css"> -->
+        <!-- <link rel="stylesheet" href="css/dusk.css"> -->
+        <!-- <link rel="stylesheet" href="css/pointToPoint.css"> -->
+        <!-- <link rel="stylesheet" href="css/wavas.css"> -->
+    </head>
+    <link rel="stylesheet" href="css/fonts.css">
+
+    <style type="text/css">
+    body{
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        color: white;
+        font-family: miaoingMM;
+        /* font-family: BerderLight; */
+        /* font-family: Lazara; */
+        /* font-family: Thin; */
+        /* background-image:url(img/music.jpg); */
+        /* background-size: 100%; */
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+    }
+    /* 移动设备背景取33% */
+    @media only screen and (max-width: 601px) {
+     body{
+         background-position-x: 33%;
+     }
+     img{
+         width: 200px;
+         height: auto;
+     }
+}
+    .container{
+        /* background-image:url(img/music.jpg);
+        background-size: 100%;
+        background-attachment: fixed; */
+        z-index: 9;
+        background-color: transparent;
+    }
+    #in-some{
+        border: 1px solid white;
+        /* border: none; */
+        background-color: black;
+        color: aliceblue;
+        width: 100%;
+        padding-left: 10px;
+        font-size: 18px;
+        font-family: MiaoingMM;
+    }
+    .jumbotron{
+        /* z-index: 999; */
+        /* background-color:deepskyblue; */
+        background-color: transparent;
+        text-align: center;
+       
+    }
+    .col-center{
+        text-align: center;
+    }
+    .row{
+        margin-top: 80px;
+        padding-left: 10px;
+        display:block;word-break: break-all;word-wrap: break-word;
+    }
+    .command{
+        
+        border: 1px solid white;
+        min-height: 100px;
+        /* height: auto; */
+        width: 100%;
+        /* padding: 20px;
+        border-top: none;
+        border-bottom: none;
+        border-right: none; */
+        border: none;
+        outline: none;
+        background-color: transparent;
+    }
+    #main-col{
+        height: auto;
+        padding: 20px;
+        /* border-top: none;
+        border-bottom: none;
+        border-right: none; */
+        border-left: 1px solid white;
+    }
+    .inner-content{
+        background-color: transparent;
+        text-align: center;
+        margin-top: 30px;
+        width: 100%;
+        display:block;word-break: break-all;word-wrap: break-word;
+    }
+    .friend-name{
+        margin-top: 30px;
+    }
+    .fa-heartbeat{
+        color: red;
+    }
+    .website-some{
+        
+    }
+    #weibsite-information{
+        display: none;
+    }
+    /* .website{
+        display: none;
+    } */
+    .article-content-left{
+        text-align: left;
+
+    }
+    .art-title{
+        cursor: pointer;
+    }
+
+    img{
+        cursor: pointer;
+        width: 40%;
+        height:auto;
+        border-radius: 10px;
+
+    }
+    @media only screen and (max-width: 601px) {
+     
+     img{
+         width: 100%;
+         
+     }
+}
+        
+    .skill{
+        padding: 0px;
+       
+        width: 60%;
+        margin-left: 20%;
+        margin-top: 30px;
+    }
+    .skill-name{
+       border: none;
+       margin: 0px;
+       width: 30%;
+       
+    }
+    .skill-percent{
+        width: 50%;
+        /* border: 1px dashed white; */
+        /* border:  1px dashed black; */
+        /* color: cornflowerblue; */
+        background-color: cornflowerblue;
+        text-align: left;
+        margin-left: 25%;
+        border-radius: 10px;
+        padding-left: 1px;
+    }
+    #the{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+    }
+    #bubble-box{
+	/* width: 400px;
+	height: 400px;
+	position: relative; */
+	border: 1px solid #DD5246;
+	/* margin-left: 1%;
+	margin-top: 1%; */
+}
+circle{
+	position: relative;
+}
+@keyframes idle {
+	from, to {
+		transform: translate(0, 3%);
+	}
+	25% {
+		transform: translate(-3%, 0);
+	}
+	50% {
+		transform: translate(0, -3%);
+	}
+	75% {
+		transform: translate(3%, 0);
+	}
+    }
+    .bubble1{
+	animation: idle 4s linear infinite;
+    }
+    .pa-float{
+        float: left;
+    }
+    .a-player{
+        max-width: 150px;
+    }
+    /* 粒子背景 */
+    .lizi{
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    z-index: -7;
+    
+    }
+    </style>
+    <link rel="stylesheet" href="css/enjoyMusic.css"> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
+    <script src="config.js"></script>
+    <script src="js/obj.js"></script>
+    <script src="js/defaultCommand.js"></script>
+    <!-- <script src="js/d3.min.js"></script>
+    <script src="js/tagscra.js"></script> -->
+    <body>
+        <!-- <canvas></canvas> -->
+        <div id="the">
+
+        <div class="jumbotron jumbotron-fluid">
+            <span><h3 id="bloger-name"></h3></span>
+            <span><h6 id="signature"></h6></span>
+        </div>
+        <!-- <div id="jsi-particle-container" class="lizi"></div> -->
+        <div class="container">
+                
+            <div class="row" id="weibsite-information">
+                <div class="col website">
+                    <div class="website-some"><span class="web-in"></span><span class="web-in"></span><span class="web-in"></span></div>
+                    <!-- <div class="website-some"><span class="fa fa-wechat"></span>&nbsp;[https://github.com]</div>
+                    <div class="website-some fa fa-google">&nbsp;[<a href="#">https://miaoing.github.io</a>]</div> -->
+                </div>
+            </div>
+            <div class="row">
+                <div>
+
+                </div>
+            </div>
+           <div class="row">
+               <div class="col" id="main-col">
+                   <div class="command" contenteditable="true">
+
+                   </div>
+                   <div class="inner-content">
+                        <!-- <div id = "bubble-box"></div> -->
+                       <!-- <span class="fa fa-bug"></span> -->
+                       <!-- <img src="img/1.jpg">
+                       <img src="img/2.jpg">
+                       <img src="img/5.jpg">
+                       <img src="img/mymus.jpg"> -->
+                       <!-- <span><h5><a href="#">HCMY</a></h5></span>
+                       <span>平凡的脚步可以走出伟大的行程</span><br><br>
+                       <span><h5><a href="#">HCMY</a></h5></span>
+                       <span>平凡的脚步可以走出伟大的行程</span><br><br> -->
+                       <!-- <span id="syntax-error"></span>
+                      
+                        <!-- <span class="art-title">a demo</span>&nbsp;[2019-8-9]&nbsp;[demo]<br>
+                        <span class="art-title">do not touch</span>&nbsp;[2019-8-9]&nbsp;[demo] -->
+                        <!-- <div>Java [20%]</div>
+                        <div class="skill-percent">| | |</div> -->
+                        
+                            <!-- <div class="col-md-4 col-sm-6 pa-float">
+                                <div class="pa-box">
+                                    <img src="img/music.jpg" alt="">
+                                    <div class="pa-box-content">
+                                        <h3 class="title">Miranda Roy</h3>
+                                        <span class="pa-post">web developer</span>
+                                    </div>
+                                    <ul class="icon">
+                                        <li><a href="#"><i class="fa fa-search"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-link"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div> -->
+    
+                   </div>
+               </div>
+           </div>
+           <!-- 这里放音乐 -->
+            
+            <!-- <div id="background" class="wall"></div>
+            <div id="midground" class="wall"></div>
+            <div id="foreground" class="wall"></div>
+            <div id="top" class="wall"></div> -->
+        </div>
+        <div id="a-player"></div>
+        <!-- <div class="waves"></div> -->
+        </div>
+        <!-- <div class="stars"></div> -->
+        <!-- <div class="particle-network-animation"></div> -->
+        <!-- <canvas id="canvas"></canvas> -->
+        <script src="js/disposeCommands.js"></script>
+        <script src="js/innerData.js"></script>
+        <script src="article.js"></script>
+        <script src="js/d3.min.js"></script>
+        <script src="js/tagscra.js"></script>
+<!--         <script src="js/script.js"></script> -->
+        <!-- <script src="js/lizi.js"></script> -->
+        <script type="text/javascript">
+        $(document).ready(function(){
+            
+        });
+        </script>
+        <!-- <script src="js/dusk.js"></script> -->
+        <!-- <script src="js/touMingDeWangZLiZi.js"></script> -->
+        <!-- <script src="js/pointToPoint.js"></script> -->
+        <script src="js/snowflakes.min.js"></script>
+        <!-- <script src="js/snow.js"></script> -->
+        <!-- <script src="js/wavas.js"></script> -->
+    </body>
+</html>
