@@ -1,0 +1,15 @@
+body {
+    background-color: #eee;
+    overflow: hidden;
+
+  }
+  canvas {
+    z-index: -5;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: transparent;
+    /* background-color: #eee; */
+    display: block;
+    margin: 0 auto;
+  }
